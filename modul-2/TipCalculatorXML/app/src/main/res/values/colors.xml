@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="input_background">#eee6ee</color>
+    <color name="switch_round_up_outline">#8A7E89</color>
+    <color name="switch_round_up_thumb">#8E868C</color>
+</resources>

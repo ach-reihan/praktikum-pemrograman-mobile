@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    android:layout_marginTop="64dp"
+    android:layout_marginBottom="64dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/labelCalculateTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate_tip"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layoutCostOfService"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutCostOfService"
+        style="@style/Widget.TipCalculatorXML.TextInputLayout.BottomLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/bill_amount"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelCalculateTip"
+        app:layout_constraintBottom_toTopOf="@id/layoutTipOptions"
+        app:startIconDrawable="@drawable/ic_money">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editCostOfService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutTipOptions"
+        style="@style/Widget.TipCalculatorXML.TextInputLayout.BottomLine.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/tip_percentage"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutCostOfService"
+        app:layout_constraintBottom_toTopOf="@id/switchRoundUp"
+        app:startIconDrawable="@drawable/ic_percent">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTipOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:labelFor="@id/autoCompleteTipOptions"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchRoundUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:splitTrack="false"
+        android:track="@drawable/switch_round_up_track"
+        android:text="@string/round_up_tip"
+        android:textSize="16sp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutTipOptions"
+        app:layout_constraintBottom_toTopOf="@+id/textTipResult"
+        app:thumbTint="@color/switch_round_up_thumb"
+        app:useMaterialThemeColors="false"
+        app:trackTint="@null"/>
+
+    <TextView
+        android:id="@+id/textTipResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tip_amount"
+        android:textColor="@color/material_dynamic_primary0"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchRoundUp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

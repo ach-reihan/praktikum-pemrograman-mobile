@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="input_background">#2e2c2e</color>
+    <color name="switch_round_up_outline">#A79CA5</color>
+    <color name="switch_round_up_thumb">#A39BA0</color>
+</resources>
+
