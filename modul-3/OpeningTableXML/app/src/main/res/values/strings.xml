@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OpeningTableXML</string>
+    <string name="featured_openings">Featured Openings</string>
+    <string name="all_openings">All Openings</string>
+    <string name="web">Web</string>
+    <string name="detail">Detail</string>
+</resources>
